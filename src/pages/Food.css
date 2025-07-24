@@ -1,0 +1,168 @@
+/* Base Styles */
+.faq-container {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.faq-header {
+  background-color: rgba(200, 131, 116, 0.8);
+  padding: 15px 0;
+  animation: slideIn 1s ease-in-out;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 30px;
+}
+
+.header-title {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.page-title {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+/* Main Content Styles */
+.faq-main {
+  flex: 1;
+  padding: 20px;
+}
+
+.faq-content {
+  max-width: 1200px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-question {
+  color: rgb(210, 40, 40);
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.highlight {
+  font-weight: bold;
+  color: rgb(210, 40, 40);
+}
+
+/* Footer Styles */
+.faq-footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.copyright, .tagline {
+  margin: 10px 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-link {
+  color: rgb(227, 125, 36);
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-title {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .page-title {
+    margin: 10px 0 0;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .faq-content {
+    padding: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

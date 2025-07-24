@@ -1,0 +1,214 @@
+.order-tracking-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .order-tracking-container h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+  
+  .tracking-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tracking-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .tracking-form button {
+    padding: 0 2rem;
+    background-color:  #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .tracking-form button:hover {
+    background-color: #ff6b6b;
+  }
+  
+  .tracking-form button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid  #ff6b6b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .order-details {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .order-status {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .progress-tracker {
+    margin: 2rem 0;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background-color: #ff6b6b;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .progress-steps span {
+    position: relative;
+    font-size: 0.8rem;
+    color: #95a5a6;
+    padding-top: 1.5rem;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .progress-steps span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    border: 2px solid white;
+  }
+  
+  .progress-steps span.active {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  .progress-steps span.active::before {
+    background-color: #ff6b6b;
+  }
+  
+  .order-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .order-section h3 {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .item-name {
+    color: #2c3e50;
+  }
+  
+  .item-price {
+    font-weight: bold;
+  }
+  
+  .order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+  }
+  
+  .back-to-home {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #f8f9fa;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .back-to-home:hover {
+    background-color: #e9ecef;
+  }
+  
+  @media (max-width: 600px) {
+    .tracking-form {
+      flex-direction: column;
+    }
+    
+    .tracking-form button {
+      padding: 0.8rem;
+    }
+  }
